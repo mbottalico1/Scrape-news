@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://localhost/nytimesdb");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -41,7 +41,7 @@ app.get("/scrape", function(req, res) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     // Now, we grab every h2 within an article tag, and do the following:
-     $("h2.story-heading").each(function(i, element) {
+     $("h2.summary").each(function(i, element) {
     //change above//
       // Save an empty result object
       var result = {};
