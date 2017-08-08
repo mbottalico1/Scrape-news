@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <title>Scraping NY Times</title>
-    </head>
-  <body>
+    <style>
+    
+    body {
+      
+    }
+
+    .jumbotron {
+      background-color: #F5F5F5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #articles {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    </style>
+</head>
+
+<body>
     <div id="wrapper">
-      <h1>Scraper</h1>
-      <div id="articles"></div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+        <div class="jumbotron">
+            <h1>NY Times Sports</h1>
+        </div>
+        <div id="articles"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="app.js"></script>
+</body>
+
 </html>

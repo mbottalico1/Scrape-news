@@ -11,11 +11,12 @@ var ArticleSchema = new Schema({
     required: true
   },
 
-  body: {
-    type: String,
-    required: true
-  },
+  //body: {
+  //  type: String,
+  //  required: true
+  //},
   // link is a required string
+  
   link: {
     type: String,
     required: true
