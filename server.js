@@ -41,7 +41,7 @@ app.get("/scrape", function(req, res) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     // Now, we grab every h2 within an article tag, and do the following:
-     $("h2.summary").each(function(i, element) {
+     $("h2 summary").each(function(i, element) {
     //change above//
       // Save an empty result object
       var result = {};
@@ -68,6 +68,19 @@ app.get("/scrape", function(req, res) {
 
     });
   });
+
+});
+
+// This will get the articles we scraped from the mongoDB
+app.get("/articles", function(req, res) {
+  // TODO: Finish the route so it grabs all of the articles
+  Article.find({}, function(err, doc) {
+    if (err) {
+      console.log('error finding all articles');
+    } else {
+      res.json(doc);
+    }
+  })
 
 });
 
