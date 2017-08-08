@@ -37,11 +37,11 @@ db.once("open", function() {
 
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
-  request("https://www.nytimes.com/", function(error, response, html) {
+  request("https://www.nytimes.com/section/sports?WT.nav=page&action=click&contentCollection=Sports&module=HPMiniNav&pgtype=Homepage&region=TopBar", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     // Now, we grab every h2 within an article tag, and do the following:
-     $("h2 summary").each(function(i, element) {
+     $("div.story-body").each(function(i, element) {
     //change above//
       // Save an empty result object
       var result = {};
