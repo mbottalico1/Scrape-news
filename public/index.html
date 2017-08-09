@@ -7,25 +7,33 @@
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <title>Scraping NY Times</title>
     <style>
-    
     body {
-      
-    }
-
-    .jumbotron {
-      background-color: #F5F5F5;
+      background-image: url('https://i.stack.imgur.com/p9mUO.jpg');
     }
 
     h1 {
-      text-align: center;
+        text-align: center;
     }
 
-    #articles {
-      text-align: center;
+    .nav-item {
+        margin-left: 50px;
+        text-align: center;
+    }
+
+    .lead {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin-left: 29%;
     }
 
     p {
-      margin-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .jumbotron {
+      opacity: .4;
     }
 
     </style>
@@ -34,12 +42,23 @@
 <body>
     <div id="wrapper">
         <div class="jumbotron">
-            <h1>NY Times Sports</h1>
+            <h1 class="display-3">NY Times Sports</h1>
+            <p class="lead">You can view and or save Sports Articles</p>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Saved Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="articles.html">Scrape new Articles</a>
+                </li>
+            </ul>
         </div>
-        <div id="articles"></div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="app.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
